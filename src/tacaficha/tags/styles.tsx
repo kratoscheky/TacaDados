@@ -5,7 +5,7 @@ export const Container = styled.div`
   gap: 4px;
   position: absolute;
   z-index: 1000;
-  right: 20px;
+  right: 40px;
 `
 
 export const PPA = styled.div`
