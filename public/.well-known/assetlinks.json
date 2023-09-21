@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "br.com.tacadados",
+      "sha256_cert_fingerprints":
+      ["F2:94:77:34:0B:89:22:FC:BA:98:88:99:74:E2:89:BF:FF:AF:AE:73:65:58:57:BA:93:DE:F0:F9:18:A9:B5:00"]
+    }
+  }
+]
