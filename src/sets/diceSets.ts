@@ -53,4 +53,4 @@ const allSet: DiceSet = {
   previewImage: allPreview,
 };
 
-export const diceSets: DiceSet[] = [...standardSets, allSet];
+export const diceSets: DiceSet[] = [allSet];
