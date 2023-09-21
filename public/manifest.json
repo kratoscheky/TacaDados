@@ -1,7 +1,6 @@
 {
   "background_color": "#ffffff",
   "description": "Role os dados do sistema 3DeT e descubra o que vai acontecer!",
-  "dir": "ltr",
   "display": "standalone",
   "name": "TacaDados",
   "orientation": "any",
@@ -12,7 +11,6 @@
   "categories": [
     "games"
   ],
-  "screenshots": [],
   "background_url": "/background.html",
   "icons": [
       {
@@ -463,6 +461,5 @@
         "src": "ios/1024.png",
         "sizes": "1024x1024"
       }
-  ],
-  "shortcuts": []
+  ]
 }
