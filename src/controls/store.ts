@@ -78,6 +78,14 @@ export const useDiceControlsStore = create<DiceControlsState>()(
     },
     incrementDieCount(id) {
       set((state) => {
+        let diceCount = 0;
+        for (const dice in state.diceCounts) {
+          diceCount += state.diceCounts[dice]
+        }
+
+        if(diceCount === 3)
+          return
+
         if (id in state.diceCounts) {
           state.diceCounts[id] += 1;
         }
