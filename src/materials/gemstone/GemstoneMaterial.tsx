@@ -6,21 +6,23 @@ import normal from "./normal.jpg";
 import { gltfTexture } from "../../helpers/gltfTexture";
 
 export function GemstoneMaterial(
-  props: JSX.IntrinsicElements["meshStandardMaterial"]
+    props: JSX.IntrinsicElements["meshPhysicalMaterial"]
 ) {
   const [albedoMap, ormMap, normalMap] = useTexture(
-    [albedo, orm, normal],
-    (textures) => gltfTexture(textures, ["SRGB", "LINEAR", "LINEAR"])
+      [albedo, orm, normal],
+      (textures) => gltfTexture(textures, ["SRGB", "LINEAR", "LINEAR"])
   );
 
   return (
-    <meshStandardMaterial
-      map={albedoMap}
-      aoMap={ormMap}
-      roughnessMap={ormMap}
-      metalnessMap={ormMap}
-      normalMap={normalMap}
-      {...props}
-    />
+      <meshPhysicalMaterial
+          map={albedoMap}
+          aoMap={ormMap}
+          metalnessMap={ormMap}
+          roughnessMap={ormMap}
+          normalMap={normalMap}
+          clearcoat={1}
+          clearcoatRoughness={0.3}
+          {...props}
+      />
   );
 }
