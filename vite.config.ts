@@ -8,7 +8,13 @@ declare var __dirname: string;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), VitePWA({ registerType: 'autoUpdate', injectRegister: 'auto', manifest: {
+  plugins: [react(), VitePWA({
+    registerType: 'autoUpdate',
+    injectRegister: 'auto',
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,hdr,glb,jpg}']
+    },
+    manifest: {
       "background_color": "#ffffff",
       "description": "Role os dados do sistema 3DeT e descubra o que vai acontecer!",
       "display": "standalone",
